@@ -8,14 +8,18 @@
     <style>
         body {
             margin: 0;
-            padding: 24px 15px;
+            padding: 20px;
             background: white;
         }
 
+        /* Center the two photos at the top */
         .photos {
             display: flex;
+            justify-content: center;
             align-items: flex-start;
             gap: 26px;
+            width: 100%;
+            margin: 0 auto;
         }
 
         .photos img {
@@ -25,23 +29,28 @@
             height: auto;
         }
 
-.contact {
-    position: fixed;
-    top: 24px;
-    right: 24px;
-    text-align: right;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 12pt;
-    line-height: 1.5;
-    color: black;
-}
-
-.contact a {
-    color: blue;
-    text-decoration: underline;
-}
+        /* Position the text in the upper-left corner */
+        .contact {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: left;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14pt;
+            line-height: 1.5;
+            color: black;
         }
 
+        /* Keep the "more" link black */
+        .contact a,
+        .contact a:visited,
+        .contact a:hover,
+        .contact a:active {
+            color: black;
+            text-decoration: underline;
+        }
+
+        /* Adjust the layout for mobile screens */
         @media (max-width: 600px) {
             body {
                 padding: 15px 10px;
@@ -49,16 +58,18 @@
 
             .photos {
                 gap: 12px;
+                margin-top: 100px;
             }
 
             .photos img {
                 width: calc(50% - 6px);
+                max-width: none;
             }
 
-            .pdf-link {
-                top: auto;
-                bottom: 18px;
-                right: 15px;
+            .contact {
+                top: 15px;
+                left: 10px;
+                font-size: 12pt;
             }
         }
     </style>
@@ -66,16 +77,16 @@
 
 <body>
 
+    <div class="contact">
+        <div>Ian Marquez García</div>
+        <div>marqueziangarcia@gmail.com</div>
+        <a href="ian_marquez_garcia_111026.pdf">more</a>
+    </div>
+
     <div class="photos">
         <img src="photo1.jpg" alt="">
         <img src="photo2.jpg" alt="">
     </div>
-
-<div class="contact">
-    <div>Ian Marquez García</div>
-    <div>marqueziangarcia@gmail.com</div>
-    <a href="ian_marquez_garcia_111026.pdf">more</a>
-</div>
 
 </body>
 </html>
