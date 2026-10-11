@@ -1,45 +1,72 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Marquez Garcia</title>
 
-<title>Ian Marquez García</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 24px 15px;
+            background: white;
+        }
 
-<style>
+        .photos {
+            display: flex;
+            align-items: flex-start;
+            gap: 26px;
+        }
 
-body {
-    background: white;
-    margin: 60px;
-}
+        .photos img {
+            display: block;
+            width: 21%;
+            max-width: 370px;
+            height: auto;
+        }
 
-a {
-    display: block;
+        .pdf-link {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: blue;
+            text-decoration: underline;
+        }
 
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18pt;
-    line-height: 19pt;
-    letter-spacing: 0.05em;
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
 
-    color: black;
+            .photos {
+                gap: 12px;
+            }
 
-    text-decoration-line: underline;
-    text-decoration-thickness: 1.2pt;
-    text-underline-offset: 3.4pt;
+            .photos img {
+                width: calc(50% - 6px);
+            }
 
-    margin-bottom: 12pt;
-}
-</style>
-
+            .pdf-link {
+                top: auto;
+                bottom: 18px;
+                right: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<a href="document1.pdf">work</a>
+    <div class="photos">
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+    </div>
 
-<a href="document2.pdf">werk</a>
-
-<a href="cv_ianmarquezgarcia_072026.pdf">cv</a>
+    <a class="pdf-link" href="ian_marquez_garcia_111026.pdf">
+        PDF
+    </a>
 
 </body>
-
 </html>
