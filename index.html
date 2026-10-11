@@ -12,7 +12,7 @@
             background: white;
         }
 
-        /* Center the two photos at the top */
+        /* Center the two photos */
         .photos {
             display: flex;
             justify-content: center;
@@ -29,7 +29,7 @@
             height: auto;
         }
 
-        /* Position the "more" link in the upper-left corner */
+        /* Position the "more" link on desktop */
         .contact {
             position: absolute;
             top: 20px;
@@ -41,7 +41,7 @@
             color: black;
         }
 
-        /* Keep the "more" link black and underlined */
+        /* Keep the link black and underlined */
         .contact a,
         .contact a:visited,
         .contact a:hover,
@@ -50,7 +50,7 @@
             text-decoration: underline;
         }
 
-        /* Adjust the layout for mobile screens */
+        /* Mobile layout */
         @media (max-width: 600px) {
             body {
                 padding: 15px 10px;
@@ -58,7 +58,7 @@
 
             .photos {
                 gap: 12px;
-                margin-top: 100px;
+                margin-top: 0;
             }
 
             .photos img {
@@ -66,10 +66,13 @@
                 max-width: none;
             }
 
+            /* Move "more" below the photos */
             .contact {
-                top: 15px;
-                left: 10px;
+                position: static;
+                margin-top: 15px;
+                margin-left: 0;
                 font-size: 12pt;
+                text-align: left;
             }
         }
     </style>
@@ -77,13 +80,13 @@
 
 <body>
 
-    <div class="contact">
-        <a href="ian_marquez_garcia_111026.pdf">more</a>
-    </div>
-
     <div class="photos">
         <img src="photo1.jpg" alt="">
         <img src="photo2.jpg" alt="">
+    </div>
+
+    <div class="contact">
+        <a href="ian_marquez_garcia_111026.pdf">more</a>
     </div>
 
 </body>
